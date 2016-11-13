@@ -42,32 +42,32 @@ t_list		*reader(int fd)
 	return (list);
 }
 
-// int			tetri_check(char *str, int counter)
-// {
-// 	int		i;
-// 	int		piece;
+int			tetri_check(char *str, int counter)
+{
+	int		i;
+	int		piece;
 
-// 	piece = 0;
-// 	i = 0;
-// 	while (i < 20)
-// 	{
-// 		if (i % 5 < 4)
-// 		{
-// 			if (!(str[i] == '#' || str[i] == '.'))
-// 				return (1);
-// 			if (str[i] == '#' && ++piece > 4)
-// 				return (2);
-// 		}
-// 		else if (str[i] != '\n')
-// 			return (3);
-// 		i++;
-// 	}
-// 	if (counter == 21 && str[20] != '\n')
-// 		return (4);
-// 	if (!tetri_file(str))
-// 		return (5);
-// 	return (0);
-// }
+	piece = 0;
+	i = 0;
+	while (i < 20)
+	{
+		if (i % 5 < 4)
+		{
+			if (!(str[i] == '#' || str[i] == '.'))
+				return (1);
+			if (str[i] == '#' && ++piece > 4)
+				return (2);
+		}
+		else if (str[i] != '\n')
+			return (3);
+		i++;
+	}
+	if (counter == 21 && str[20] != '\n')
+		return (4);
+	if (!tetri_file(str))
+		return (5);
+	return (0);
+}
 
 int			tetri_file(char *str)
 {
